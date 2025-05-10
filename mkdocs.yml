@@ -1,0 +1,69 @@
+site_name: chat2files
+site_description: chat2files is a tool to query a bunch of files in a folder
+
+repo_url: https://github.com/miaucl/chat2files
+repo_name: miaucl/chat2files
+
+theme:
+  name: material
+  icon:
+        logo: material/library
+  palette:
+        # Palette toggle for automatic mode
+      - media: "(prefers-color-scheme)"
+        toggle:
+          icon: material/brightness-auto
+          name: Switch to light mode
+
+      # Palette toggle for light mode
+      - media: "(prefers-color-scheme: light)"
+        scheme: default
+        primary: indigo
+        accent: light green
+        toggle:
+          icon: material/brightness-7
+          name: Switch to dark mode
+
+      # Palette toggle for dark mode
+      - media: "(prefers-color-scheme: dark)"
+        scheme: slate
+        primary: indigo
+        accent: light green
+        toggle:
+          icon: material/brightness-4
+          name: Switch to light mode
+
+markdown_extensions:
+    - toc:
+        permalink: true
+    - pymdownx.highlight:
+        anchor_linenums: true
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
+
+plugins:
+    - search
+    - mkdocstrings:
+        handlers:
+            python:
+                import:
+                    - https://docs.python.org/3.11/objects.inv
+                options:
+                    docstring_style: numpy
+                    merge_init_into_class: true
+                    show_signature: false
+                    members_order: source
+
+watch:
+    - docs
+    - chat2files
+
+
+nav:
+    - About: index.md
+    - Authors: authors.md
+    - License: license.md
+    - Reference: reference.md

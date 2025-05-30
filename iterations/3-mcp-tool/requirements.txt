@@ -1,0 +1,5 @@
+gradio
+haystack-ai
+python-dotenv
+"mcp[cli]"
+httpx

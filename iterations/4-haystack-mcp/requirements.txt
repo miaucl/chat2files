@@ -1,0 +1,4 @@
+haystack-ai
+python-dotenv
+"mcp[cli]"
+mcp-haystack
